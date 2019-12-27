@@ -27,28 +27,38 @@ class MainHome extends Component {
               <label class="badge badge-secondary">Size</label>
             </div>
           </div>
-          {this.state.filters.sizes.map(size =>
-            <div class="row">
-              <div class="col">
-                <ul>
-                  <ol>
-                    <input type="checkbox" id={size} />
-                    <label for="colFormLabelSm" className="col-sm-2 col-form-label col-form-label-sm">{size}</label>
-                  </ol>
-                </ul>
+          {/* <div class="row"> */}
+            {/* <div class="col-sm-2"> */}
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Size</h5>
+                  {this.state.filters.sizes.map(size =>
+/*                     <div class="row">
+                      <div class="col"> */
+                        <ul>
+                          <ol>
+                            <input type="checkbox" id={size} />
+                            <label for="colFormLabelSm" >{size}</label>
+                          </ol>
+                        </ul>
+/*                       </div>
+                    </div> */
+                  )}
+                </div>
               </div>
-            </div>
-          )}
+            {/* </div> */}
+         {/*  </div> */}
+
+
+          {/* Home Body */}
+          <div class="col-10 border">
+            <h2>Home</h2>
+          </div>
+
         </div>
-
-        {/* Home Body */}
-        <div class="col-10 border">
-          <h2>Home</h2>
         </div>
-
-      </div>
-    );
-  }
-}
-
+        );
+      }
+    }
+    
 export default MainHome;
