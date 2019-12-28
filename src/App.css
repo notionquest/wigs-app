@@ -45,3 +45,5 @@ column-header-main {
 p text-left {
   text-align: left;
 }
+
+label { padding: 0 10px; }

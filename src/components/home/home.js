@@ -11,46 +11,45 @@ class MainHome extends Component {
     };
   }
   render() {
-
     return (
-      <div class="container-fluid border">
-
-
-        <div class="row">
+      <div className="container-fluid border">
+        <div className="row">
           {/* Home Filter */}
-          <div class="col-2 border d-table">
-            <div class="row">
-              <div class="col bg-primary">
-                <p class="text-white font-weight-bold">Filters</p>
+          <div className="col-2 border d-table">
+            <div className="row">
+              <div className="col bg-primary">
+                <p className="text-white font-weight-bold">Filters</p>
               </div>
             </div>
-            <div class="card">
-              <div class="card-header col-xs-12 col-md-12 bg-info text-white d-flex">
+            <div className="card">
+              <div className="card-header col-xs-12 col-md-12 bg-info text-white d-flex">
                 <p>Size</p>
               </div>
-              <div class="card-body">
+              <div className="card-body">
+
                 {this.state.filters.sizes.map(size =>
-                  <ul>
-                    <ol>
+                  <div className="card-text" key={size}>
+                    <div className="row">
                       <input type="checkbox" id={size} />
-                      <label for="colFormLabelSm" >{size}</label>
-                    </ol>
-                  </ul>
+                      <label htmlFor={size} className="text-dark font-weight-normal">{size}</label>
+                    </div>
+                  </div>
+
                 )}
               </div>
             </div>
           </div>
           <div>
             {/* Home Body */}
-            <div class="col-10 border d-table">
+            <div className="col-10 border d-table">
               <h2>Home</h2>
             </div>
           </div>
         </div>
 
         <div>
-          <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
-            <div class="container text-center">
+          <footer id="sticky-footer" className="py-4 bg-dark text-white-50">
+            <div className="container text-center">
               <small>Copyright &copy; Wigs Website</small>
             </div>
           </footer>
