@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Photos from '../photo/photos';
 
 
 class MainHome extends Component {
@@ -15,15 +16,15 @@ class MainHome extends Component {
       <div className="container-fluid border">
         <div className="row">
           {/* Home Filter */}
-          <div className="col-2 border d-table">
+          <div className="col-2 border">
             <div className="row">
-              <div className="col bg-primary">
+              <div className="col bg-secondary">
                 <p className="text-white font-weight-bold">Filters</p>
               </div>
             </div>
             <div className="card">
-              <div className="card-header col-xs-12 col-md-12 bg-info text-white d-flex">
-                <p>Size</p>
+              <div className="bg-info text-white">
+                <p className="text-white font-weight-bold">Size</p>
               </div>
               <div className="card-body">
 
@@ -42,17 +43,9 @@ class MainHome extends Component {
           <div>
             {/* Home Body */}
             <div className="col-10 border d-table">
-              <h2>Home</h2>
+              <Photos/>
             </div>
           </div>
-        </div>
-
-        <div>
-          <footer id="sticky-footer" className="py-4 bg-dark text-white-50">
-            <div className="container text-center">
-              <small>Copyright &copy; Wigs Website</small>
-            </div>
-          </footer>
         </div>
       </div>
     );
