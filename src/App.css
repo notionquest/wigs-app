@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+column-header-main {
+  background-color: #7574bf;
+  
+}
+
+p text-left {
+  text-align: left;
+}
