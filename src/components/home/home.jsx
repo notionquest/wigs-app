@@ -19,12 +19,12 @@ class MainHome extends Component {
           <div className="col-2 border">
             <div className="row">
               <div className="col bg-secondary">
-                <p className="text-white font-weight-bold">Filters</p>
+                <p className="d-inline text-white font-weight-bold">Filters</p>
               </div>
             </div>
             <div className="card">
               <div className="bg-info text-white">
-                <p className="text-white font-weight-bold">Size</p>
+                <p className="d-inline p-2 text-white font-weight-bold">Size</p>
               </div>
               <div className="card-body">
 

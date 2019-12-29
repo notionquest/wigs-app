@@ -18,12 +18,12 @@ const NavBarHome = (props) => {
     <div className="container-fluid border">
       
       <Navbar color="#FFFFFF" light expand="md">
-        <NavbarBrand href="/">Wigs</NavbarBrand>
+        <NavbarBrand href="/"><h3>Wigs</h3></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/contact">Contact</NavLink>
+              <NavLink href="/contact"><div class="d-inline font-weight-bold text">Contact</div></NavLink>
             </NavItem>
           </Nav>
         </Collapse>
