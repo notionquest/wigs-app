@@ -40,11 +40,9 @@ class MainHome extends Component {
               </div>
             </div>
           </div>
-          <div>
+          <div className="col-10 border">
             {/* Home Body */}
-            <div>
-              <Photos />
-            </div>
+              <Photos />            
           </div>
         </div>
       </div>

@@ -108,7 +108,7 @@ class Photos extends Component {
     }
     render() {
         return (
-            <div className="container border">
+            <div>
                 {this.state.wigs.map((wig, index) =>
                     <CreateCard imageIndex={index} key={wig.id} wig={wig} />
                 )}
@@ -123,7 +123,7 @@ function CreateCard(props) {
     if (index % 3 === 0) {
         return (
             <div className="row">
-                <div className="col">
+                <div className="col-4">
                     <Card>
                         <CardBody>
                             <CardTitle>{props.wig.title}</CardTitle>
@@ -135,7 +135,7 @@ function CreateCard(props) {
         );
     } else {
         return (
-            <div className="col">
+            <div className="col-4">
                 <Card>
                     <CardBody>
                         <CardTitle>{props.wig.title}</CardTitle>
