@@ -108,23 +108,43 @@ class Photos extends Component {
     }
     render() {
         return (
-            <div>
-                <div>
-                    {this.state.wigs.map(wig =>
-                        <div>
-                            <Card>
-                                <CardBody>
-                                    <CardTitle>{wig.title}</CardTitle>
-                                </CardBody>
-                                <img width="100%" src={wig.imgsrc} alt="Card image cap" />
-                            </Card>
-                        </div>
-
-                    )}
-                </div>
+            <div className="container border">
+                {this.state.wigs.map((wig, index) =>
+                    <CreateCard imageIndex={index} key={wig.id} wig={wig} />
+                )}
             </div>
         );
     }
+}
+
+function CreateCard(props) {
+    const index = props.imageIndex;
+    console.log('create card', index);
+    if (index % 3 === 0) {
+        return (
+            <div className="row">
+                <div className="col">
+                    <Card>
+                        <CardBody>
+                            <CardTitle>{props.wig.title}</CardTitle>
+                        </CardBody>
+                        <img width="100%" src={props.wig.imgsrc} alt="Card image cap" />
+                    </Card>
+                </div >
+            </div>
+        );
+    } else {
+        return (
+            <div className="col">
+                <Card>
+                    <CardBody>
+                        <CardTitle>{props.wig.title}</CardTitle>
+                    </CardBody>
+                    <img width="100%" src={props.wig.imgsrc} alt="Card image cap" />
+                </Card>
+            </div>);
+    }
+
 }
 
 export default Photos;

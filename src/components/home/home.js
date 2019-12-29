@@ -42,8 +42,8 @@ class MainHome extends Component {
           </div>
           <div>
             {/* Home Body */}
-            <div className="col-10 border d-table">
-              <Photos/>
+            <div>
+              <Photos />
             </div>
           </div>
         </div>
