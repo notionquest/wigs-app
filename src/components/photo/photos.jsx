@@ -109,42 +109,34 @@ class Photos extends Component {
     render() {
         return (
             <div>
-                {this.state.wigs.map((wig, index) =>
-                    <CreateCard imageIndex={index} key={wig.id} wig={wig} />
-                )}
+                <CreateCard wigs={this.state.wigs} />
             </div>
         );
     }
 }
 
 function CreateCard(props) {
-    const index = props.imageIndex;
-    console.log('create card', index);
-    if (index % 3 === 0) {
-        return (
-            <div className="row">
-                <div className="col-4">
-                    <Card>
-                        <CardBody>
-                            <CardTitle>{props.wig.title}</CardTitle>
-                        </CardBody>
-                        <img width="100%" src={props.wig.imgsrc} />
-                    </Card>
-                </div >
-            </div>
-        );
-    } else {
-        return (
+    const wigs = props.wigs;
+    let finalArr = [], photos = [];
+
+    wigs.forEach((wig, index) => {
+        photos.push(
             <div className="col-4">
                 <Card>
                     <CardBody>
-                        <CardTitle>{props.wig.title}</CardTitle>
+                        <CardTitle>{wig.title}</CardTitle>
                     </CardBody>
-                    <img width="100%" src={props.wig.imgsrc} />
+                    <img width="100%" src={wig.imgsrc} alt="" />
                 </Card>
-            </div>);
-    }
+            </div >
+        );
+        if ((index + 1) % 3 === 0) {
+            finalArr.push(<div className="row">{photos}</div>);
+            photos = [];
+        }
+    });
 
+    return finalArr;
 }
 
 export default Photos;
