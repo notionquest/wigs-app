@@ -128,7 +128,7 @@ function CreateCard(props) {
                         <CardBody>
                             <CardTitle>{props.wig.title}</CardTitle>
                         </CardBody>
-                        <img width="100%" src={props.wig.imgsrc} alt="Card image cap" />
+                        <img width="100%" src={props.wig.imgsrc} />
                     </Card>
                 </div >
             </div>
@@ -140,7 +140,7 @@ function CreateCard(props) {
                     <CardBody>
                         <CardTitle>{props.wig.title}</CardTitle>
                     </CardBody>
-                    <img width="100%" src={props.wig.imgsrc} alt="Card image cap" />
+                    <img width="100%" src={props.wig.imgsrc} />
                 </Card>
             </div>);
     }

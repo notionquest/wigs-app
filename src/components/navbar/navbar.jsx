@@ -23,7 +23,7 @@ const NavBarHome = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/contact"><div class="d-inline font-weight-bold text">Contact</div></NavLink>
+              <NavLink href="/contact"><div className="d-inline font-weight-bold text">Contact</div></NavLink>
             </NavItem>
           </Nav>
         </Collapse>
