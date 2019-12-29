@@ -15,8 +15,7 @@ const NavBarHome = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div className="container-fluid border">
-      
+    <div className="container-fluid">
       <Navbar color="#FFFFFF" light expand="md">
         <NavbarBrand href="/"><h3>Wigs</h3></NavbarBrand>
         <NavbarToggler onClick={toggle} />

@@ -13,10 +13,10 @@ class MainHome extends Component {
   }
   render() {
     return (
-      <div className="container-fluid border">
+      <div className="container-fluid">
         <div className="row">
           {/* Home Filter */}
-          <div className="col-2 border">
+          <div className="col-2">
             <div className="row">
               <div className="col bg-secondary">
                 <p className="d-inline text-white font-weight-bold">Filters</p>
@@ -32,7 +32,7 @@ class MainHome extends Component {
                   <div className="card-text" key={size}>
                     <div className="row">
                       <input type="checkbox" id={size} />
-                      <label htmlFor={size} className="text-dark font-weight-normal">{size}</label>
+                      <label htmlFor={size} className="text-dark font-weight-normal"><small>{size}</small></label>
                     </div>
                   </div>
 
@@ -40,7 +40,7 @@ class MainHome extends Component {
               </div>
             </div>
           </div>
-          <div className="col-10 border">
+          <div className="col-10">
             {/* Home Body */}
               <Photos />            
           </div>

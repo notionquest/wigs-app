@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Card, CardBody, CardTitle } from "reactstrap";
+import { Card, CardBody, CardSubtitle, CardFooter } from "reactstrap";
+import Sharing from "./sharing";
 
 class Photos extends Component {
     constructor(props) {
@@ -122,11 +123,16 @@ function CreateCard(props) {
     wigs.forEach((wig, index) => {
         photos.push(
             <div className="col-4">
-                <Card>
+                <Card className="border-dark mb-3">
                     <CardBody>
-                        <CardTitle>{wig.title}</CardTitle>
+                        <CardSubtitle><p className="font-weight-bold">{wig.title}</p></CardSubtitle>
                     </CardBody>
                     <img width="100%" src={wig.imgsrc} alt="" />
+                    <CardFooter>
+                        <div>
+                            <Sharing wigInfo={wig}/>
+                        </div>
+                    </CardFooter>
                 </Card>
             </div >
         );
