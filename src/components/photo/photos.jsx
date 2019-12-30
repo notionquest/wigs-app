@@ -137,14 +137,13 @@ class Photos extends Component {
 }
 
 function CreateCard(props) {
-    console.log('Create props :', props);
     const wigs = slice(props.wigs, ((props.page.currentPage - 1) * props.page.size),(props.page.currentPage) * props.page.size);
     let finalArr = [], photos = [];
 
     wigs.forEach((wig, index) => {
         photos.push(
-            <div className="col-4">
-                <Card className="border-dark mb-3">
+            <div className="col-4" key={index}>
+                <Card className="border-dark mb-3" key={index}>
                     <CardBody>
                         <CardSubtitle><p className="font-weight-bold">{wig.title}</p></CardSubtitle>
                     </CardBody>
@@ -158,7 +157,7 @@ function CreateCard(props) {
             </div >
         );
         if ((index + 1) % 3 === 0) {
-            finalArr.push(<div className="row">{photos}</div>);
+            finalArr.push(<div className="row" key={index}>{photos}</div>);
             photos = [];
         }
     });

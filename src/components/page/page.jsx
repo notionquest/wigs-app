@@ -51,7 +51,7 @@ function CreatePages(props) {
     times(props.page.numberOfPages, (pageNo) => {
         let pageNumber = pageNo + 1;
         pages.push(
-            <PaginationItem active={props.page.currentPage === pageNumber}>
+            <PaginationItem active={props.page.currentPage === pageNumber} key={pageNumber}>
                 <PaginationLink href="#" className="border-primary md-5" onClick={() => props.onClick(pageNumber)} value={pageNumber}>
                     {pageNumber}
                 </PaginationLink>
