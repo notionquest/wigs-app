@@ -16,9 +16,12 @@ class Page extends Component {
         this.setState(prevState => ({
             page: {
                 numberOfPages: prevState.page.numberOfPages,
+                size: prevState.page.size,
                 currentPage: e
             }
-        }))
+        }));
+        //this.props.currentPage(e);
+        this.props.onPaginate(e);
     };
 
     render() {
@@ -47,23 +50,14 @@ function CreatePages(props) {
     //console.log('Create page:', props.page);
     times(props.page.numberOfPages, (pageNo) => {
         let pageNumber = pageNo + 1;
-        if (props.page.currentPage === pageNumber) {
-            pages.push(
-                <PaginationItem active>
-                    <PaginationLink href="#" className="border-primary md-5" onClick={() => props.onClick(pageNumber)} value={pageNumber}>
-                        {pageNumber}
-                    </PaginationLink>
-                </PaginationItem>
-            );
-        } else {
-            pages.push(
-                <PaginationItem>
-                    <PaginationLink href="#" className="border-primary md-5" onClick={() => props.onClick(pageNumber)} value={pageNumber}>
-                        {pageNumber}
-                    </PaginationLink>
-                </PaginationItem>
-            );
-        }
+        pages.push(
+            <PaginationItem active={props.page.currentPage === pageNumber}>
+                <PaginationLink href="#" className="border-primary md-5" onClick={() => props.onClick(pageNumber)} value={pageNumber}>
+                    {pageNumber}
+                </PaginationLink>
+            </PaginationItem>
+        );
+
     });
     return pages;
 }
