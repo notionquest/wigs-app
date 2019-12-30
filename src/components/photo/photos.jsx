@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Card, CardBody, CardSubtitle, CardFooter } from "reactstrap";
 import Sharing from "./sharing";
+import Page from "../page/page";
 
 class Photos extends Component {
     constructor(props) {
@@ -104,13 +105,18 @@ class Photos extends Component {
                 imgsrc: 'https://i.picsum.photos/id/22/300/300.jpg',
                 title: 'Falls',
                 size: 3
-            }]
+            }],
+            page: {
+                numberOfPages: 3,
+                currentPage: 1
+            }
         };
     }
     render() {
         return (
             <div>
                 <CreateCard wigs={this.state.wigs} />
+                <Page page={this.state.page}/>
             </div>
         );
     }
@@ -130,7 +136,7 @@ function CreateCard(props) {
                     <img width="100%" src={wig.imgsrc} alt="" />
                     <CardFooter>
                         <div>
-                            <Sharing wigInfo={wig}/>
+                            <Sharing wigInfo={wig} />
                         </div>
                     </CardFooter>
                 </Card>
