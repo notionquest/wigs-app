@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Photos from '../photo/photos';
+import { Badge } from 'reactstrap';
 
 
 class MainHome extends Component {
@@ -18,16 +19,15 @@ class MainHome extends Component {
           {/* Home Filter */}
           <div className="col-2">
             <div className="row">
-              <div className="col bg-secondary">
-                <p className="d-inline text-white font-weight-bold">Filters</p>
+              <div className="col">
+                <h4><Badge><p className="d-inline text-white font-weight-bold">Filters</p></Badge></h4>
               </div>
             </div>
             <div className="card">
-              <div className="bg-info text-white">
-                <p className="d-inline p-2 text-white font-weight-bold">Size</p>
+              <div className="col">
+                <h5><Badge color="primary">Size</Badge></h5>
               </div>
               <div className="card-body">
-
                 {this.state.filters.sizes.map(size =>
                   <div className="card-text" key={size}>
                     <div className="row">
@@ -35,7 +35,6 @@ class MainHome extends Component {
                       <label htmlFor={size} className="text-dark font-weight-normal"><small>{size}</small></label>
                     </div>
                   </div>
-
                 )}
               </div>
             </div>
