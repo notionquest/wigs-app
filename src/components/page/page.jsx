@@ -12,7 +12,7 @@ class Page extends Component {
     }
 
     onChangePage(e) {
-        console.log('Change page:', e);
+        //console.log('Change page:', e);
         this.setState(prevState => ({
             page: {
                 numberOfPages: prevState.page.numberOfPages,
@@ -44,31 +44,28 @@ class Page extends Component {
 
 function CreatePages(props) {
     let pages = [];
-    console.log('Create page:', props.page);
+    //console.log('Create page:', props.page);
     times(props.page.numberOfPages, (pageNo) => {
-        if (props.page.currentPage === pageNo) {
+        let pageNumber = pageNo + 1;
+        if (props.page.currentPage === pageNumber) {
             pages.push(
                 <PaginationItem active>
-                    <PaginationLink href="#" className="border-primary md-5" onClick={handleChange} value={pageNo + 1}>
-                        {pageNo + 1}
+                    <PaginationLink href="#" className="border-primary md-5" onClick={() => props.onClick(pageNumber)} value={pageNumber}>
+                        {pageNumber}
                     </PaginationLink>
                 </PaginationItem>
             );
         } else {
             pages.push(
                 <PaginationItem>
-                    <PaginationLink href="#" className="border-primary md-5" onClick={handleChange} value={pageNo + 1}>
-                        {pageNo + 1}
+                    <PaginationLink href="#" className="border-primary md-5" onClick={() => props.onClick(pageNumber)} value={pageNumber}>
+                        {pageNumber}
                     </PaginationLink>
                 </PaginationItem>
             );
         }
     });
     return pages;
-}
-
-function handleChange(e) {
-    this.props.onChangePage(e.target.value);
 }
 
 export default Page;
