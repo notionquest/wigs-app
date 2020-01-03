@@ -4,14 +4,13 @@ class Footer extends Component {
     render() {
         return (
             <div>
-                <footer id="sticky-footer" className="py-4 bg-info">
-                    <div className="container text-center">
-                        <small>Copyright &copy; Wigs company</small>
-                    </div>
+                <footer className="footer bg-dark text-muted">
+                    <div className="container">
+                        <span className="footer-legal">
+                            <p className="text-center text-white">&copy; 2020 Wigs Inc. All rights reserved.</p>
+                        </span> </div>
                 </footer>
-            </div>
-        );
+            </div>);
     }
 }
-
 export default Footer;

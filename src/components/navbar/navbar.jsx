@@ -16,17 +16,19 @@ const NavBarHome = (props) => {
 
   return (
     <div className="container-fluid">
-      <Navbar color="#FFFFFF" light expand="md">
-        <NavbarBrand href="/"><h3>Wigs</h3></NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="/contact"><div className="d-inline font-weight-bold text">Contact</div></NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </Navbar>
+      <header>
+        <Navbar color="#FFFFFF" light expand="md">
+          <NavbarBrand href="/"><h3>Wigs</h3></NavbarBrand>
+          <NavbarToggler onClick={toggle} />
+          <Collapse isOpen={isOpen} navbar>
+            <Nav className="mr-auto" navbar>
+              <NavItem>
+                <NavLink href="/contact"><div className="d-inline font-weight-bold text">Contact</div></NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </header>
     </div>
   );
 }
