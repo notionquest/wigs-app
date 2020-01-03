@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {
-  Collapse,
   Navbar,
   NavbarToggler,
   NavbarBrand,
@@ -8,6 +7,7 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap';
+import styles from './nav-bar.module.css';
 
 const NavBarHome = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,16 +17,14 @@ const NavBarHome = (props) => {
   return (
     <div className="container-fluid">
       <header>
-        <Navbar color="#FFFFFF" light expand="md">
-          <NavbarBrand href="/"><h3>Wigs</h3></NavbarBrand>
+        <Navbar className={styles.navbar} expand="md">
+          <NavbarBrand href="/"><h3  className="text-white">Wigs</h3></NavbarBrand>
           <NavbarToggler onClick={toggle} />
-          <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <NavLink href="/contact"><div className="d-inline font-weight-bold text">Contact</div></NavLink>
+                <NavLink href="/contact"><div className="text-white">Contact</div></NavLink>
               </NavItem>
-            </Nav>
-          </Collapse>
+            </Nav>          
         </Navbar>
       </header>
     </div>

@@ -1,0 +1,13 @@
+.currentRouteLink{
+  font-weight: 300;
+}
+
+.standoutLink{
+  background-color: #33C;
+  color: white;
+}
+
+.navbar{
+  background-color: rgb(92, 62, 151);
+  color: white;
+}

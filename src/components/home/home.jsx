@@ -25,23 +25,23 @@ class MainHome extends Component {
             </div>
             <div className="row">
               <Card className="border-0">
-                <div className="row">
-                  <div className="col-1">
-                  </div>
-                  <div className="col-4">
-                    <h5><Badge color="primary">Size</Badge></h5>
-                  </div>
-                </div>
-                <CardBody>
-                  {this.state.filters.sizes.map((size, index) =>
-                    <div className="row" key={index}>
-                      <div className="col-2"></div>
-                      <div>
-                        <input type="checkbox" id={size} />
-                        <label htmlFor={size} className="text-dark font-weight-normal"><small>{size}</small></label>
-                      </div>
+                  <div className="row">
+                    <div className="col-1">
                     </div>
-                  )}
+                    <div className="col-4">
+                      <h5><Badge color="primary">Size</Badge></h5>
+                    </div>
+                  </div>
+                <CardBody>
+                {this.state.filters.sizes.map((size, index) =>
+                  <div className="row" key={index}>
+                    <div className="col-2"></div>
+                    <div>
+                      <input type="checkbox" id={size} />
+                      <label htmlFor={size} className="text-dark font-weight-normal"><small>{size}</small></label>
+                    </div>
+                  </div>
+                )}
                 </CardBody>
               </Card>
             </div>
