@@ -20,6 +20,9 @@ function App() {
             <Route path='/contact'>
               <Contact />
             </Route>
+            <Route path='/:id'>
+              <Contact />
+            </Route>            
           </Switch>
         </BrowserRouter>
       </div>

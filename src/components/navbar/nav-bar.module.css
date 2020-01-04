@@ -16,3 +16,15 @@
   border-width: 1px;
   border-style: solid;
 }
+
+.navButton{
+  background-color: rgb(92, 62, 151);
+  color: white;
+  border: 1px;
+  border-color: black;
+  border-radius: 100px;
+}
+
+.navButton:hover {
+  background-color: rgb(75, 197, 197);
+}

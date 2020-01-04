@@ -10,6 +10,8 @@ import {
 } from 'reactstrap';
 import styles from './nav-bar.module.css';
 
+var classNames = require('classnames');
+
 const NavBarHome = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -18,12 +20,12 @@ const NavBarHome = (props) => {
   return (
     <div className="container-fluid">
       <header>
-        <Navbar className={styles.navbar} expand="md">
+        <Navbar className={classNames(styles.navbar, "mb-2")} expand="md">
           <NavbarBrand href="/"><h3  className="text-white">Wigs</h3></NavbarBrand>
           <NavbarToggler onClick={toggle} />
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <Button outline color={styles.navbar} href="/contact"><div className="font-weight-bold text-white">Contact</div></Button>
+                <NavLink className={styles.navButton} href="/contact"><div className="font-weight-bold text-white">Contact</div></NavLink>
               </NavItem>                 
             </Nav>          
         </Navbar>

@@ -8,7 +8,7 @@ export default class Contact extends Component {
   render() {
     return (
       <Container>
-        <Card className="border-0">
+        <Card className="border-1 border-dark">
           <CardHeader className="bg-white mb-3 pd-3"><h4>Contact</h4></CardHeader>
           <CardBody>
             <div className="row ">

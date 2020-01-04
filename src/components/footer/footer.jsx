@@ -4,7 +4,7 @@ class Footer extends Component {
     render() {
         return (
             <div>
-                <footer className="footer bg-dark text-muted">
+                <footer className="footer bg-dark text-muted mt-2">
                     <div className="container">
                         <span className="footer-legal">
                             <p className="text-center text-white">&copy; 2020 Wigs Inc. All rights reserved.</p>

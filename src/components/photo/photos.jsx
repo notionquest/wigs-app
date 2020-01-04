@@ -195,7 +195,7 @@ function CreateCard(props) {
                             </div>
                         </CardSubtitle>
                     </CardBody>
-                    <img width="100%" src={wig.imgsrc} alt="" />
+                    <a href={'/' + wig.id}><img width="100%" src={wig.imgsrc} alt="" /></a>
                     <CardFooter>
                         <div>
                             <Sharing wigInfo={wig} />
