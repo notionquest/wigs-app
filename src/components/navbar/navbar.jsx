@@ -5,7 +5,8 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
+  Button
 } from 'reactstrap';
 import styles from './nav-bar.module.css';
 
@@ -22,8 +23,8 @@ const NavBarHome = (props) => {
           <NavbarToggler onClick={toggle} />
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <NavLink href="/contact"><div className="text-white">Contact</div></NavLink>
-              </NavItem>
+                <Button outline color={styles.navbar} href="/contact"><div className="font-weight-bold text-white">Contact</div></Button>
+              </NavItem>                 
             </Nav>          
         </Navbar>
       </header>
