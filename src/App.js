@@ -6,6 +6,7 @@ import Home from './components/home/home';
 import Contact from './components/contact/contact';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import Footer from './components/footer/footer';
+import DetailedInfo from './components/detailed/detailedinfo';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
               <Contact />
             </Route>
             <Route path='/:id'>
-              <Contact />
+              <DetailedInfo />
             </Route>            
           </Switch>
         </BrowserRouter>
