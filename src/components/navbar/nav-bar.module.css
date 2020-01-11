@@ -8,23 +8,30 @@
 }
 
 .navbar{
-  background-color: rgb(92, 62, 151);
-  color: white;
+  background-color: rgb(175, 233, 136);
+  color: black;
   border: 1px;
-  border-color: rgb(32, 7, 83);
+  border-color: rgb(28, 139, 14);
   border-radius: 1px;
   border-width: 1px;
   border-style: solid;
 }
 
 .navButton{
-  background-color: rgb(92, 62, 151);
-  color: white;
+  background-color: rgb(175, 233, 136);
+  color: black;
   border: 1px;
   border-color: black;
   border-radius: 100px;
 }
 
+.navText{
+  color: black;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 .navButton:hover {
-  background-color: rgb(75, 197, 197);
+  background-color: rgb(239, 245, 237);
 }

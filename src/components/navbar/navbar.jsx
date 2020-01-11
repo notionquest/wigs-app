@@ -21,11 +21,11 @@ const NavBarHome = (props) => {
     <div className="container-fluid">
       <header>
         <Navbar className={classNames(styles.navbar, "mb-2")} expand="md">
-          <NavbarBrand href="/"><h3  className="text-white">Wigs</h3></NavbarBrand>
+          <NavbarBrand href="/"><h3  className={styles.navText}>Wigs</h3></NavbarBrand>
           <NavbarToggler onClick={toggle} />
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <NavLink className={styles.navButton} href="/contact"><div className="font-weight-bold text-white">Contact</div></NavLink>
+                <NavLink className={styles.navButton} href="/contact"><div className={styles.navText}>Contact</div></NavLink>
               </NavItem>                 
             </Nav>          
         </Navbar>
