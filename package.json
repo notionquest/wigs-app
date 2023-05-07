@@ -19,7 +19,7 @@
     "react-medium-image-zoom": "^3.1.2",
     "react-price": "^0.6.0",
     "react-router-dom": "5.1.2",
-    "react-scripts": "3.3.0",
+    "react-scripts": "5.0.1",
     "react-social-sharing": "^3.0.1",
     "reactstrap": "^8.2.0"
   },
